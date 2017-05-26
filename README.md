@@ -1,5 +1,7 @@
 # docker-adminer
 
+adminer快速搭建，使用php官方alpine镜像，体积小。
+
 [Adminer](http://www.adminer.org/en/) is a full-featured database management
 tool for the web. It is a lightweight alternative to setting up phpMyAdmin.
 This is a [docker](https://www.docker.io) image that eases setup.
