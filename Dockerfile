@@ -7,3 +7,5 @@ RUN curl  --connect-timeout 120 -m 120 -o  /var/www/index.php http://www.adminer
 RUN curl --connect-timeout 120 -m 120 -o /var/www/adminer.css https://raw.githubusercontent.com/vrana/adminer/master/designs/lucas-sandery/adminer.css
 
 EXPOSE 80
+
+CMD ["php", "-S", "0.0.0.0:80"]
