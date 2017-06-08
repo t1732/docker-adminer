@@ -1,0 +1,25 @@
+version: '3.0'
+services:
+  adminer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - pgsql
+      - mysql
+
+  pgsql:
+    image: postgres:9.6.3
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
