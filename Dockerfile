@@ -4,7 +4,7 @@ RUN set -ex \
     && docker-php-ext-install pdo pdo_mysql pdo_pgsql
 
 WORKDIR /var/www
-RUN curl --connect-timeout 120 -m 120 -o /var/www/index.php http://www.adminer.org/static/download/4.3.1/adminer-4.3.1.php
+RUN curl --connect-timeout 120 -m 120 -o /var/www/index.php https://github.com/vrana/adminer/releases/download/v4.5.0/adminer-4.5.0.php
 RUN curl --connect-timeout 120 -m 120 -o /var/www/adminer.css https://raw.githubusercontent.com/arcs-/Adminer-Material-Theme/master/adminer.css
 
 EXPOSE 8080
