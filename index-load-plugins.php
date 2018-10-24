@@ -8,6 +8,7 @@ function adminer_object() {
 
   $plugins = array(
     new AdminerLoginPasswordLess(password_hash("dummy", PASSWORD_DEFAULT)),
+    new AdminerJsonColumn,
   );
 
   return new AdminerPlugin($plugins);
